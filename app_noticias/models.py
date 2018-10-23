@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from PIL import Image
 
 # Create your models here.
 
@@ -41,7 +42,7 @@ class Noticia(models.Model):
     class Meta:
         verbose_name = 'Notícia'
         verbose_name_plural = 'Notícias'
-    imagem = models.ImageField('Imagem')
+    imagem = models.ImageField('Imagem',upload_to = 'pic_folder/')
     titulo = models.CharField('Título', max_length=128)
     conteudo = models.TextField('Conteúdo')
     data_de_publicacao = models.DateTimeField(
