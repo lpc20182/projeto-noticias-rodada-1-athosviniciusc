@@ -41,7 +41,7 @@ class Noticia(models.Model):
     class Meta:
         verbose_name = 'Notícia'
         verbose_name_plural = 'Notícias'
-
+    imagem = models.ImageField('Imagem')
     titulo = models.CharField('Título', max_length=128)
     conteudo = models.TextField('Conteúdo')
     data_de_publicacao = models.DateTimeField(
